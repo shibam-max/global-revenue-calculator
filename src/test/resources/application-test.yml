@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  
+  flyway:
+    enabled: false
+  
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: test-group
+    producer:
+      bootstrap-servers: localhost:9092
+  
+  redis:
+    host: localhost
+    port: 6379
+
+logging:
+  level:
+    com.revenue.calculator: DEBUG
